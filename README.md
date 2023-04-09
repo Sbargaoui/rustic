@@ -1,6 +1,4 @@
-# rustic
-
-Ta nouvelle cli préférée ⚙️
+# rust-kata ⚙️
 
 ## :pencil: Requirements
 
@@ -59,9 +57,14 @@ rustup update
 - gitpod (inside brower or in your IDE)
   - [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Sbargaoui/rustic)
 
-## :pencil: Workshop instructions
+### :pencil: Run solutions :
 
-TBD
+```bash
+// from git root directory
+cargo run --bin init
+cargo run --bin bench
+cargo run --bin args
+```
 
 ### :zap: Tests
 
@@ -71,4 +74,14 @@ TBD
 // all
 cargo test
 
+```
+
+```bash
+// all
+cargo test
+
+//specific
+cargo test --bin init
+cargo test --bin bench
+cargo test --bin args
 ```
