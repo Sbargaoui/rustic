@@ -99,7 +99,7 @@ running 0 tests
 
 ## :pencil: Problem to solve
 
-Change the programm output with :
+Change the program output with :
 
 ```bash
 Hello w💩rld !

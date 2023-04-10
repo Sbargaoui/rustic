@@ -1,11 +1,10 @@
 use std::env;
 
-fn greets(name: &str) -> String {
-    format!("Hello, {} 🦀 !", name)
-}
-fn calculate_total_weight(weight: i32, reps: i32, series: i32) -> i32 {
-    weight * reps * series
-}
+mod bench;
+mod greetings;
+
+use bench::calculate_total_weight;
+use greetings::greets;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -29,24 +28,8 @@ fn main() {
             let reps: i32 = reps.parse::<i32>().unwrap();
             let series: i32 = series.parse::<i32>().unwrap();
             let total_weight = calculate_total_weight(weight, reps, series);
-            println!("Sami can do {} kilos on the bench press", total_weight);
+            println!("Sami can do {:?} kilos on the bench press", total_weight);
         }
         _ => eprintln!("Not supported command"),
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::calculate_total_weight;
-    use super::greets;
-
-    #[test]
-    fn test_greets() {
-        assert_eq!(greets("You"), String::from("Hello, You 🦀 !"));
-    }
-
-    #[test]
-    fn test_calculate_total_weight() {
-        assert_eq!(calculate_total_weight(90, 6, 5), 2700);
     }
 }
