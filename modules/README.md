@@ -52,7 +52,7 @@ fn main() {
 
 - [crates and modules](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
 
-## :pencil: Exercice: Split app in different modules
+## :pencil: Exercise: Split app in different modules
 
 Expected tree
 

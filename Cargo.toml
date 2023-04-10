@@ -4,5 +4,6 @@ members=[
     "init/solution",
     "bench/solution",
     "args/solution",
-    "modules/solution"
+    "modules/solution",
+    "cli/solution"
 ]

@@ -85,3 +85,15 @@ cargo test --bin init
 cargo test --bin bench
 cargo test --bin args
 ```
+
+### 🚀 Get through this kata :
+
+Follow these steps to build your first Rust cli :
+
+```
+- init
+- bench
+- modules
+- args
+- cli
+```

@@ -22,7 +22,7 @@ version = "2.3.4"
 fn main() {
     let weight = 90;
     let reps = 6;
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 }
 
 ```
@@ -39,10 +39,10 @@ $ cargo run
 fn main() {
     let weight = 90;
     let reps = 6;
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 
     weight = weight * reps; // Error
-    println!("Sami has lift {} kg in total.", weight)
+    println!("Joe has lift {} kg in total.", weight)
 
 }
 ```
@@ -55,10 +55,10 @@ const REPS: i32 = 6;
 fn main() {
     let mut weight = WEIGHT;
     let reps = REPS;
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 
     weight = weight * reps; 
-    println!("Sami has lift {} kg in total.", weight)
+    println!("Joe has lift {} kg in total.", weight)
 }
 ```
 
@@ -73,10 +73,10 @@ const REPS: i32 = 6;
 fn main() {
     let mut weight: i32 = WEIGHT;
     let reps: i32 = REPS;
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 
     weight = weight * reps; 
-    println!("Sami has lift {} kg in total.", weight)
+    println!("Joe has lift {} kg in total.", weight)
 }
 ```
 
@@ -88,10 +88,10 @@ const REPS: i32 = 6;
 
 fn main() {
     let (mut weight, reps) = (WEIGHT, REPS);
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 
     weight = weight * reps; 
-    println!("Sami has lift {} kg in total.", weight)
+    println!("Joe has lift {} kg in total.", weight)
 }
 
 ```
@@ -104,10 +104,10 @@ const REPS: i32 = 6;
 
 fn main() {
     let (mut weight, reps): (i32, i32) = (WEIGHT, REPS);
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
 
     weight = weight * reps; 
-    println!("Sami has lift {} kg in total.", weight)
+    println!("Joe has lift {} kg in total.", weight)
 }
 ```
 
@@ -152,9 +152,9 @@ const REPS: i32 = 6;
 
 fn main() {
     let (weight, reps): (i32, i32) = (WEIGHT, REPS);
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
     let total_weight  = calculate_total_weight(weight, reps, 5);
-    println!("Sami can do {} kilos on the bench press", total_weight);
+    println!("Joe can do {} kilos on the bench press", total_weight);
 
 }
 
@@ -175,9 +175,9 @@ const REPS: i32 = 6;
 
 fn main() {
     let (weight, reps): (i32, i32) = (WEIGHT, REPS);
-    println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);
+    println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);
     let total_weight  = calculate_total_weight(weight, reps, 5);
-    println!("Sami can do {} kilos on the bench press", total_weight);
+    println!("Joe can do {} kilos on the bench press", total_weight);
 
 }
 

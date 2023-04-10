@@ -18,7 +18,7 @@ Let's discover Rust's basic syntax and concepts
 :bulb: Notes
 
 Take time to read this part\
-You can refer to it when writing exercice implementation\
+You can refer to it when writing Exercise implementation\
 Everything needed is described below.
 
 ### Variables and assignations
@@ -352,7 +352,7 @@ let even = numbers.into_iter()                  //get iterator from collection
   - [ ] Declare the variable `weight` and initialize it to `90`
   - [ ] Declare the variable `reps` and initialize it to `6`
 - [ ] Change the `println!(...)` at the end of `main()` to:
-  - `println!("Sami can do {} reps of {} kilos on the bench press", reps, weight);`
+  - `println!("Joe can do {} reps of {} kilos on the bench press", reps, weight);`
 - [ ] Run your program using cargo (see "cargo help" if you forgot the command).
       Some common errors you may hit:
   - Forgot to use `let` to bind a variable
@@ -363,7 +363,7 @@ let even = numbers.into_iter()                  //get iterator from collection
 - [ ] After the `println!(...)`, multiply `weight` by `reps` like this:
   - `weight = weight * reps;`
 - [ ] Add a second `println!(...)` to the end:
-  - `println!("Sami has lift {} kg in total.", weight);`
+  - `println!("Joe has lift {} kg in total.", weight);`
 - [ ] Run your program again using cargo
   - Did you run into an error about mutability? Go back and add `mut` at the right spot on the line where you declare `weight`.
 - [ ] Declare a constant named `WEIGHT` and set it to `90` (the type is `i32`).

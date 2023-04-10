@@ -28,20 +28,20 @@ fn main() {
 ```bash
 $ cargo run
 
-     Running `/your/path/target/debug/crabby`
-["/your/path/target/debug/crabby"]
+     Running `/your/path/target/debug/rustic`
+["/your/path/target/debug/rustic"]
 
 $ cargo run -- foo bar 1
 
-     Running `/your/path/target/debug/crabby`
-["/your/path/target/debug/crabby", "foo", "bar", 1]
+     Running `/your/path/target/debug/rustic`
+["/your/path/target/debug/rustic", "foo", "bar", 1]
 ```
 
 :pushpin: Remember
 
 - every arguments after `--` are passed to the program. \
   Avoid mixing argument with `cargo run` program options (ex: cargo run --help)\
-  Equivalent to `./target/debug/crabby foo bar 1`
+  Equivalent to `./target/debug/rustic foo bar 1`
 - Arguments collected are Strings
 
 :bulb: Common libraries provided in Rust standard library
@@ -295,7 +295,7 @@ assert!(try_successful_smaller_number.is_ok());
 - [From / Into](https://doc.rust-lang.org/rust-by-example/conversion/from_into.html)
 - [convert module documentation](https://doc.rust-lang.org/std/convert/index.html)
 
-### :pencil: Exercice : Update application to execute two commands
+### :pencil: Exercise : Update application to execute two commands
 
 Greetings
 
@@ -310,8 +310,8 @@ Bench
 ```bash
 cargo run 165 5 4
 
-Sami can do 5 reps of 165 kilos on the bench press
-Sami can do 3300 kilos on the bench press
+Joe can do 5 reps of 165 kilos on the bench press
+Joe can do 3300 kilos on the bench press
 
 ```
 

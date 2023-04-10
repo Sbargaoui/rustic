@@ -22,14 +22,14 @@ fn main() {
             let reps = args.get(3).expect("Reps is required for bench");
             let series = args.get(4).expect("Series is required for bench");
             println!(
-                "Sami can do {} reps of {} kilos on the bench press",
+                "Joe can do {} reps of {} kilos on the bench press",
                 reps, weight
             );
             let weight: i32 = weight.parse::<i32>().unwrap();
             let reps: i32 = reps.parse::<i32>().unwrap();
             let series: i32 = series.parse::<i32>().unwrap();
             let total_weight = calculate_total_weight(weight, reps, series);
-            println!("Sami can do {} kilos on the bench press", total_weight);
+            println!("Joe can do {} kilos on the bench press", total_weight);
         }
         _ => eprintln!("Not supported command"),
     }
