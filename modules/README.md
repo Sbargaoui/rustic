@@ -1,4 +1,4 @@
-# Learn how organize code
+# Learn how to organize your code - DRY
 
 Our cli has two functionalities (greetings and bench) until now.\
 It is always better to split the desired logic in different files.
@@ -26,7 +26,7 @@ pub fn greets(name: &str) {
 }
 ```
 
-Nb: functions are private by defaut, you must add `pub` keyword
+Nb: functions are private by defaut, you must add `pub`
 
 ```rust
 // main.rs
@@ -45,8 +45,8 @@ fn main() {
 
 :pushpin: Remember
 
-- declare module and declare usage
-- visibibility is private by default
+- Declare a module and declare it's usage
+- Visibility is private by default
 
 :books: More resources
 
@@ -65,4 +65,4 @@ Expected tree
 
 :bulb: Tips
 
-- do not forget the default visiblity
+- Do not forget the default visiblity

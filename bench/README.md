@@ -219,7 +219,7 @@ enum Actions {
 
 :pushpin: Remember
 
-- Rust do not mix data and behaviour. You don't have "classes" like in Java
+- Rust does not mix data and its underlying behaviour. You don't have "classes" like in Python.
 - `enum` are powerful and commonly used with `match` operator
 
 :books: More resources
@@ -229,7 +229,7 @@ enum Actions {
 
 ## Optional and Result
 
-Rust have some enum already defined `Option` and `Result`
+Rust has implemented enum already, as defined in `Option` and `Result`.
 
 ```rust
 // An output can have either Some value or no value/ None.
@@ -265,8 +265,8 @@ match num.parse::<i32>() {
 
 :pushpin: Remember
 
-- There are no Exception in Rust. Either you have a successful operation or an Error
-- There are non Null or Void in Rust. Either you have a value or an absence of value
+- There are no Exceptions in Rust. Either you have a successful operation or an Error.
+- There are no Null or Void types in Rust. Either you have a value or an absence of value - you don't.
 
 :books: More resources
 
@@ -293,7 +293,7 @@ if x % 3 == 0 && x % 5 == 0 {
 }
 ```
 
-:warning: There are no null value in Rust
+:warning: There are no null values in Rust
 
 ```rust
 // The empty tuple () represents the absence of data.
@@ -344,10 +344,12 @@ let even = numbers.into_iter()                  //get iterator from collection
 
 ### Part 1
 
-- [ ] Make a new project named `kata_rust` using cargo in this directory
+- [ ] Make a new project named `bench` using cargo in this directory
   - See "cargo help" if you forgot the command.
 - [ ] Open `Cargo.toml`
   - [ ] Change the version number to `2.3.4` and save the file. Keep an eye out for that version number in cargo's output when you run it!
+- [ ] In `src/main.rs`, define a function called `greets(name)` that prints hello world using the variable `name`
+- [ ] In `src/main.rs`, call `greets(name)` in your `main()` function
 - [ ] In `src/main.rs` at the start of the `main()` function:
   - [ ] Declare the variable `weight` and initialize it to `90`
   - [ ] Declare the variable `reps` and initialize it to `6`

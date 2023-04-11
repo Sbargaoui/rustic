@@ -4,7 +4,7 @@ In order to interact with our cli, we need to provide and retrieve arguments
 
 ## :dart: Objectives
 
-- interact with environnement
+- interact with the context
 - add dependencies
 - parse arguments
 - manage errors
@@ -13,7 +13,7 @@ In order to interact with our cli, we need to provide and retrieve arguments
 
 ## :pencil: Retrieve cli arguments
 
-Rust already imports common used symbols like Vec, String, Option and Result.\
+Rust already imports commonly used symbols like Vec, String, Option and Result.\
 For other symbols, you must import module with `use` keyword
 
 ```rust
@@ -39,12 +39,12 @@ $ cargo run -- foo bar 1
 
 :pushpin: Remember
 
-- every arguments after `--` are passed to the program. \
-  Avoid mixing argument with `cargo run` program options (ex: cargo run --help)\
+- Every argument after `--` is passed to the execution context. \
+  Avoid mixing arguments with `cargo run` and program options (ex: cargo run --help)\
   Equivalent to `./target/debug/rustic foo bar 1`
-- Arguments collected are Strings
+- Arguments collected are Strings natively - think about casting them if needed.
 
-:bulb: Common libraries provided in Rust standard library
+:bulb: Common libraries provided in Rust's standard library
 
 - fmt: [formatting and printing](https://doc.rust-lang.org/std/fmt/)
 - env: [inspect and manipulate process environment](https://doc.rust-lang.org/std/env/)
@@ -60,7 +60,7 @@ $ cargo run -- foo bar 1
 
 ## :pencil: Manage Errors
 
-Update our code to greets with argument passed to our app
+Update your code to greet with argument passed to our app
 
 ```rust
 fn main() {
@@ -70,16 +70,16 @@ fn main() {
 }
 
 fn greets(name: &str) {
-    println!("Hello, {} 🦀 !", name);
+    println!("Hello {} 🦀 !", name);
 }
 
 ```
 
 ```bash
-$ cargo run -- John
+$ cargo run -- Joe
 
-Running `/your/path/target/debug/args john`
-Hello, john 🦀 !
+Running `/your/path/target/debug/args Joe`
+Hello Joe 🦀 !
 ```
 
 What happens if no argument is provided ?
@@ -109,7 +109,7 @@ assert_eq!(None, v.get(3));
 assert_eq!(None, v.get(0..4));
 ```
 
-Either we have an argument provided either none
+Either we have an argument provided or none
 
 Optional can have a value `Some(val)` or `None`
 
@@ -120,7 +120,7 @@ enum Option<T> {
 }
 ```
 
-Many ways to manage our code
+Many ways to manage our code :
 
 ```rust
 // manage both cases
@@ -153,7 +153,7 @@ let name = args.get(1).expect("Name is required");
 
 ## Retrieve application argument
 
-Try to pass an integer as argument and print square
+Try to pass an integer as an argument and print square
 
 ```Bash
 cargo run -- 2
@@ -206,9 +206,9 @@ let notaninteger = "whatever".parse::<u32>().unwrap();
 let toomuch = "300".parse::<u8>().unwrap();
 ```
 
-We can manage error like we do with `Option`
+We can manage errors like we do with `Option`
 
-Nb: `Err` provides message about failure
+Nb: `Err` provides a message about failure
 
 ```rust
 match args.get(1).unwrap().parse::<u32>() {
@@ -224,11 +224,11 @@ match args.get(1).unwrap().parse::<u32>() {
 
 ### Type conversion
 
-When you want to match a type to another, Rust provided `trait` to implement custom behaviour
+When you want to match a type to another, Rust provides `trait` to implement custom behaviour.
 
 #### From trait
 
-Use can `From` trait when you assume conversion must success
+Use can `From` trait when you assume the conversion has no errors to it.
 
 ```rust
 use std::convert::From;
@@ -250,7 +250,7 @@ fn main() {
 }
 ```
 
-> If you handle `From` trait you don't have to handle equivalent `Into` trait
+> If you handle `From` traitn you don't have to handle equivalent `Into` trait.
 
 #### TryFrom trait
 
@@ -287,7 +287,7 @@ assert!(try_successful_smaller_number.is_ok());
 :pushpin: Remember
 
 - You must handle conversion yourself with traits
-- you decide if failure ends your program or not
+- You decide if failure ends your program or not
 
 :bulb: notes
 
@@ -295,14 +295,14 @@ assert!(try_successful_smaller_number.is_ok());
 - [From / Into](https://doc.rust-lang.org/rust-by-example/conversion/from_into.html)
 - [convert module documentation](https://doc.rust-lang.org/std/convert/index.html)
 
-### :pencil: Exercise : Update application to execute two commands
+### :pencil: Exercise : Update your application to execute two commands
 
 Greetings
 
 ```bash
 cargo run greets You
 
-Hello, You !
+Hello You !
 ```
 
 Bench
@@ -315,13 +315,13 @@ Joe can do 3300 kilos on the bench press
 
 ```
 
-Read the compiler errors :)
+Read the compiler errors 🤷🏻‍♂️
 
 :bulb: Tips
 
 - `String` can be created from `&str` with `String::from()`
 - `&str` can be created from String with `.as_str()̀`
-- use type conversion to convert cli argument to Game `enum`
+- Use type conversion to convert cli argument to Game `enum`
 
 :books: More resources
 
@@ -329,4 +329,4 @@ Read the compiler errors :)
 
 ## :clap: Congrats
 
-You understand how to interact with your cli !
+This ain't over !

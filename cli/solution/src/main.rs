@@ -29,13 +29,13 @@ enum Commands {
         #[clap(short, long, value_parser)]
         name: String,
     },
-    // Bench with random values
+    /// Best gym day ever, after squats
     Bench {
         #[clap(short = 'w', long, value_enum)]
         weight: i32,
         #[clap(short = 'r', long, value_enum)]
         reps: i32,
-        // make series optional
+        /// Optional, randomized else
         #[clap(short = 's', long, value_enum)]
         series: Option<i32>,
     },

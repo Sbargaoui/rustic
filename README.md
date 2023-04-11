@@ -64,11 +64,13 @@ rustup update
 cargo run --bin init
 cargo run --bin bench
 cargo run --bin args
+cargo run --bin modules
+cargo run --bin cli
 ```
 
 ### :zap: Tests
 
-> “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+> “Never allow the same bug to bite you twice.”
 
 ```bash
 // all
@@ -84,6 +86,8 @@ cargo test
 cargo test --bin init
 cargo test --bin bench
 cargo test --bin args
+cargo test --bin modules
+cargo test --bin cli
 ```
 
 ### 🚀 Get through this kata :
@@ -93,7 +97,7 @@ Follow these steps to build your first Rust cli :
 ```
 - init
 - bench
-- modules
 - args
+- modules
 - cli
 ```

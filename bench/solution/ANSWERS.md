@@ -19,6 +19,10 @@ version = "2.3.4"
 ```rust
 // src/main.rs
 
+fn greets(name: &str) -> String {
+    format!("Hello {} 🦀 !", name)
+}
+
 fn main() {
     let weight = 90;
     let reps = 6;
