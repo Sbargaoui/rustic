@@ -1,4 +1,4 @@
-# rust-kata ⚙️
+# rustic: a cli for learning purposes ⚙️
 
 ## :pencil: Requirements
 

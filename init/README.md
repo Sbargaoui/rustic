@@ -16,13 +16,19 @@ It manages dependencies, tasks, project creation, workspaces... (can be compare 
 
 ```bash
 cd /your/project/directory/
-cargo new rustic
+cargo init
+```
+
+or
+
+```bash
+cargo new /your/project/directory/
 ```
 
 Move to your application directory :
 
 ```bash
-cd rustic
+cd /your/project/directory/
 ```
 
 > :bulb: Notes
@@ -84,7 +90,7 @@ cargo compiles with the debug profile if needed and runs compiled programs
 
 ### How to test ?
 
-Launch `cargo`:
+Launch `cargo test`:
 
 ```bash
 cargo test
@@ -99,20 +105,20 @@ running 0 tests
 
 ## :pencil: Problem to solve
 
-Change the program output with :
+Initialize a project and change the ouput to :
 
 ```bash
-Hello w💩rld !
+Hello Joe !
 ```
 
 > :bulb: Notes
->
+
 > - emojis are not ASCII Chars
 > - Strings are stored as Utf8 encoded references in Rust
 
 ## :clap: Congrats
 
-You have a working Rust setup !
+You now have a working Rust setup !
 
 Check the expected source code [here](./solution/src/main.rs)
 
@@ -125,12 +131,8 @@ What you have learned
 - Run project
 - Test project
 
-## :books: Additional resources
+## :books: More resources
 
 - [Cargo profiles](https://doc.rust-lang.org/book/ch14-01-release-profiles.html)
 - [Strings](https://doc.rust-lang.org/rust-by-example/std/str.html)
 - [Rust string and UTF8](https://doc.rust-lang.org/book/ch08-02-strings.html)
-
-### Next Part
-
-TBD
